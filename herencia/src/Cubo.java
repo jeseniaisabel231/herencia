@@ -1,12 +1,14 @@
 public class Cubo extends Poligono {
+    double area;
     public Cubo(String nombre, int lados) {
         super(nombre, lados);
     }
-    public void area(){
-        System.out.println("El area de un cubo es: " + (this.lados*this.lados)*6);
-    }
 
-    public void perimetro(){
-        System.out.println("El perimetro de un cubo es: " + this.lados*12);
+    public void volumenCubo(){
+        System.out.println("El volumen es " + Math.pow(getLongitud(),3));
+    }
+    public void areaCubo(){
+        area = (getLongitud()*getLongitud())*getNumCaras();
+        System.out.println("El area es " + area);
     }
 }
