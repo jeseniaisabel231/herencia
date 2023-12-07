@@ -1,17 +1,67 @@
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
+import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
-        // Press Alt+Intro with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        int opcion, opcion1, opcion2, opcion3, numLados;
+        double LongLados, base, altura, arista, LongLado;
+        System.out.println("-----MENU-----");
+        System.out.println("1. Bidimensonal");
+        System.out.println("2. Tridimensional");
 
-        // Press Mayús+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
+        Scanner entrada= new Scanner(System.in);
+        System.out.println("Ingrese la opción: ");
+        opcion= entrada.nextInt();
 
-            // Press Mayús+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
+        if (opcion==1){
+            System.out.println("Submenu:");
+            System.out.println("1. Regulares");
+            System.out.println("2. Irregulares");
+            System.out.println("Ingrese una opción: ");
+            opcion2= entrada.nextInt();
+            if (opcion2==1){
+                System.out.println("1.Poligono");
+                System.out.println("2.Cuadrado");
+                opcion3= entrada.nextInt();
+
+                if (opcion3==1){
+                    System.out.println("Ingrese la cantidad de lados: ");
+                    numLados= entrada.nextInt();
+                    System.out.println("Ingrese la longitud del lado: ");
+                    LongLado= entrada.nextDouble();
+                    Poligono poligono1= new Poligono("Poligono", numLados);
+                    poligono1.setLado(LongLado);
+                    poligono1.perimetroRegulares();
+                }else{
+                    System.out.println("Ingrese la longitud del lado: ");
+                    LongLados= entrada.nextFloat();
+
+                    Cuadrado cuadrado1= new Cuadrado("Cuadrado", 4);
+                    cuadrado1.setLado(LongLados);
+                    cuadrado1.area();
+                    cuadrado1.perimetroRegulares();
+                }
+            } else if (opcion2==2) {
+                System.out.println("1.Rectangulos ");
+                System.out.println("Ingrese la base: ");
+                base= entrada.nextFloat();
+                System.out.println("Ingrese la altura: ");
+                altura= entrada.nextFloat();
+                Rectangulo rectangulo1= new Rectangulo("Poligono", 4);
+                rectangulo1.setBase(base);
+                rectangulo1.setAltura(altura);
+                rectangulo1.areaRec();
+                rectangulo1.perimetroRec();
+            }
+        } else if (opcion==2) {
+            System.out.println("1. Cubo ");
+            System.out.println("Ingrese la longitud del lado: ");
+            arista= entrada.nextFloat();
+            Cubo cubo1= new Cubo("Cubo", 12);
+
+            cubo1.setNumCaras(6);
+            cubo1.setLongitud(arista);
+            cubo1.areaCubo();
+            cubo1.volumenCubo();
         }
+
     }
 }

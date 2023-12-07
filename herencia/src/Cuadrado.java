@@ -7,4 +7,4 @@ public class Cuadrado extends Poligono{
         System.out.println(" El area del cuadrado es: " + getLado()*getLado());
     }
 }
-}
+

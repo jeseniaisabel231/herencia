@@ -1,4 +1,4 @@
-public class Cubo extends Poligono {
+public class Cubo extends Tridimensionales {
     double area;
     public Cubo(String nombre, int lados) {
         super(nombre, lados);
