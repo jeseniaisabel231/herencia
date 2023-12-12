@@ -27,4 +27,8 @@ public class Figuras {
     public void tipoFigura(){
         System.out.println(" Esto es un " + this.getNombre());
     }
+
+    public void Perimetro(){
+        System.out.println("El perimetro es:");
+    }
 }

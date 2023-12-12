@@ -25,4 +25,6 @@ public class Bidimensional extends Figuras{
     public void setPerimetro(float perimetro){
         this.perimetro =perimetro;
     }
+
+
 }

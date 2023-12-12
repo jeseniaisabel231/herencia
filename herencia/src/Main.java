@@ -32,24 +32,25 @@ public class Main {
                     poligono1.perimetroRegulares();
                 }else{
                     System.out.println("Ingrese la longitud del lado: ");
-                    LongLados= entrada.nextFloat();
+                    LongLados= entrada.nextDouble();
 
                     Cuadrado cuadrado1= new Cuadrado("Cuadrado", 4);
                     cuadrado1.setLado(LongLados);
-                    cuadrado1.area();
-                    cuadrado1.perimetroRegulares();
+                    cuadrado1.area(LongLados);
+                    cuadrado1.Perimetro();
                 }
             } else if (opcion2==2) {
                 System.out.println("1.Rectangulos ");
                 System.out.println("Ingrese la base: ");
-                base= entrada.nextFloat();
+                base= entrada.nextDouble();
                 System.out.println("Ingrese la altura: ");
-                altura= entrada.nextFloat();
+                altura= entrada.nextDouble();
                 Rectangulo rectangulo1= new Rectangulo("Poligono", 4);
                 rectangulo1.setBase(base);
                 rectangulo1.setAltura(altura);
-                rectangulo1.areaRec();
-                rectangulo1.perimetroRec();
+                rectangulo1.areaRec(base,altura);
+                //Sobreescribir metodo
+                rectangulo1.Perimetro();
             }
         } else if (opcion==2) {
             System.out.println("1. Cubo ");
